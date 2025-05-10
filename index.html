@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sharmas Singanamala</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Bookman Old Style', serif;
+      background-color: black;
+      color: white;
+      overflow-x: hidden;
+    }
+    header, footer {
+      background: black;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: white;
+      font-weight: bold;
+      position: relative;
+    }
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: -5px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background: red;
+      transition: width 0.3s;
+    }
+    nav a:hover::after {
+      width: 100%;
+    }
+    .intro {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: center;
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .bio-text {
+      flex: 1;
+      padding: 20px;
+      text-align: left;
+    }
+    .profile-img {
+      width: 250px;
+      height: 250px;
+      border-radius: 50%;
+      border: 5px solid red;
+      object-fit: cover;
+      transition: transform 0.5s, box-shadow 0.5s;
+      box-shadow: 0 10px 30px rgba(255,255,255,0.2);
+    }
+    .profile-img:hover {
+      transform: rotateY(10deg) rotateX(10deg) scale(1.05);
+      box-shadow: 0 20px 60px rgba(255, 255, 255, 0.3);
+    }
+    .name {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 10px;
+    }
+    .name span:nth-child(1) {
+      color: red;
+    }
+    .name span:nth-child(2) {
+      color: yellow;
+    }
+    .description {
+      font-size: 1.1rem;
+    }
+    .buttons {
+      margin: 30px 0;
+      text-align: center;
+    }
+    .btn {
+      display: inline-block;
+      margin: 10px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      font-weight: 600;
+      color: white;
+      text-decoration: none;
+      background: linear-gradient(to right, red, orange);
+      box-shadow: 0 5px 15px rgba(255, 0, 0, 0.4);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      cursor: pointer;
+    }
+    .btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 30px rgba(255, 0, 0, 0.5);
+    }
+    .section {
+      display: none;
+      background: black;
+      color: white;
+      margin: 40px auto;
+      padding: 40px;
+      border-radius: 20px;
+      max-width: 1000px;
+      box-shadow: 0 20px 40px rgba(255,255,255,0.1);
+      animation: fadeIn 0.6s ease;
+    }
+    .section h3 {
+      color: yellow;
+    }
+    iframe {
+      border: none;
+      width: 100%;
+      height: 600px;
+      border-radius: 15px;
+      box-shadow: 0 15px 30px rgba(255,255,255,0.1);
+    }
+    footer a {
+      color: orange;
+      text-decoration: none;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Sharmas Singanamala</h1>
+    <p>Computer Science and Engineering Student, Kalasalingam University, Madurai</p>
+    <nav>
+      <a href="#" onclick="showSection('resume')">Resume</a>
+      <a href="#" onclick="showSection('projects')">Projects</a>
+      <a href="#" onclick="showSection('personal')">Personal</a>
+    </nav>
+  </header>
+
+  <section class="intro">
+    <div class="bio-text">
+      <div class="name">
+        <span>Sharmas.</span><span>Singanamala</span>
+      </div>
+      <p class="description">
+        I am a passionate Computer Science student with hands-on experience in developing innovative projects using
+        Python and Java Programming.My projects primarily focus on Python-based solutions, including applications in
+        data processing. Additionally, I have experience in Java programming, HTML and CSS , which enhances my
+        ability to develop scalable and efficient software.      
+      </p>
+    </div>
+    <div>
+      <img class="profile-img" src="https://res.cloudinary.com/dghqpghxd/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1746693228/1000150784_qqicay.jpg" alt="Sharmas Singanamala">
+    </div>
+  </section>
+
+  <div class="buttons">
+    <span class="btn" onclick="showSection('resume')">Resume</span>
+    <span class="btn" onclick="showSection('projects')">Projects</span>
+    <span class="btn" onclick="showSection('personal')">Personal</span>
+  </div>
+
+  <div id="resume" class="section">
+    <h3>My Resume</h3>
+    <iframe src="https://drive.google.com/file/d/1uUUSG0pETyHFjFSI7A--0Tg9cON9Z-lI/preview" title="Resume PDF"></iframe>
+  </div>
+
+  <div id="projects" class="section">
+    <h3>Projects</h3>
+    <p>
+      <p>
+        Plant Leaf Disease Detection :
+      </p>
+    Developed a deep learning-based plant disease detection system using Convolutional Neural Networks (CNNs). Integrated OpenCV for image preprocessing and feature extraction to enhance detection accuracy. The model was optimized to identify various plant diseases with high precision, enabling early detection and prevention insights.
+    </p>
+    <br>
+    <p>
+      <p>
+        Medical Report Summarization :
+      </p>
+      Built a Flask-based web application that automatically summarizes medical reports from PDF files. Leveraged Hugging Face Transformers for AI-driven text summarization to extract essential insights. Designed a user-friendly React frontend for uploading reports and viewing summaries. Integrated PostgreSQL to securely store patient data and medical summaries, and deployed the entire application using Docker.
+    </p>
+    <br>
+    <p>
+      <p>
+        Automated Language Translator : 
+      </p>
+Created a real-time automated language translation web application using Flask. Incorporated Natural Language Processing (NLP) models to support multilingual text translation and dynamic model selection, allowing users to choose the desired target language. The frontend was built with HTML, CSS, and JavaScript to provide an interactive and responsive user experience.
+    </p>
+  </div>
+
+  <div id="personal" class="section">
+    <h3>Personal</h3>
+    <h4>Sharmas Singanamala</h4>
+    <p>I am from Tadipatri in Ananthapur District. I completed my SSC at Ravindra Bharathi School, where I developed a strong academic base. For my Intermediate education, I chose the MPC (Maths, Physics, Chemistry) stream at Narendra Educational Institute and Defence Academy, which helped me build logical thinking and discipline.
+      Currently, I am in my third year of Computer Science and Engineering with a specialization in Artificial Intelligence and Machine Learning (AIML) at Kalasalingam University, Madurai. This journey has strengthened both my technical skills and problem-solving abilities. </p>
+  </div>
+
+  <footer>
+    <p>Email: <a href="mailto:singanamalasharmasvali@gmail.com">singanamalasharmasvali@gmail.com</a></p>
+    <p>GitHub: <a href="https://github.com/sharmassinganamala">github.com/sharmassinganamala</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/sharmassinganamala/">linkedin.com/in/sharmassinganamala</a></p>
+    <p>Contact: +91 9391865188</p>
+    <p>&copy; 2025 Sharmas Singanamala.</p>
+  </footer>
+
+  <script>
+    function showSection(id) {
+      document.querySelectorAll('.section').forEach(section => {
+        section.style.display = 'none';
+      });
+      document.getElementById(id).style.display = 'block';
+    }
+  </script>
+</body>
+</html>
